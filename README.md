@@ -8,17 +8,24 @@ $ mkdir build
 $ cd build
 $ cmake ..
 $ make
-$ ./hello
+$ ./src/hello
 ```
 
 
 ## Directory tree
 ```
 .
-├── CMakeLists.txt
-├── inc
+├── build                   // Output directory
+├── CMakeLists.txt          // Top level cmake file
+├── inc                     // Header files here
 │   └── functions.hpp
-└── src
-    └── hello.cpp
+├── lib                     // Source files here
+│   ├── CMakeLists.txt
+│   └── functions.cpp
+├── src                     // Executable main files here
+│   ├── CMakeLists.txt
+│   └── main.cpp
+├── test                    // (TODO) Test files here
+└── thirdparty              // (TODO) External libraries
 ```
 
