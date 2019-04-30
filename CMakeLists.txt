@@ -1,28 +1,29 @@
 cmake_minimum_required(VERSION 3.13.0)
 
-# The project name
-project(Hello)
+# The project name, version and languages
+project(Hello VERSION 1.0 LANGUAGES CXX)
 
-# Include the header files
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc)
+# The library files
+add_library(LibSources 
+    src/functions.cpp 
+    )
+target_include_directories(LibSources PUBLIC inc)
+target_compile_features(LibSources PUBLIC cxx_std_17)
 
-# Include the source files
-file(GLOB SOURCES "src/*.cpp")
+# The executable target
+set(TargetName hello)
+add_executable(${TargetName} src/hello.cpp)
 
+# Set the language standard to C++17 for target
+set_target_properties(${TargetName} PROPERTIES  CXX_STANDARD 17)
 
-######## Target ######## 
-set(TARGET_NAME hello)
-
-# The executable 
-add_executable(${TARGET_NAME} ${SOURCES})
-
-# The language standard, C++17
-set_property(TARGET ${TARGET_NAME} PROPERTY CXX_STANDARD 17)
-
-# Compiler flags
-target_compile_options(${TARGET_NAME} PRIVATE
+# Compiler flags for target
+target_compile_options(${TargetName} PRIVATE
     -O3
     -Werror
     -Wall
     -Wextra
-    -Wpedantic)
+    -Wpedantic
+    )
+
+target_link_libraries(${TargetName} PRIVATE LibSources)
