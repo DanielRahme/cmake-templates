@@ -14,4 +14,6 @@ int main()
 
   constexpr auto f = []{ std::cout << "Just a lambda\n"; }; 
   f();
+
+  std::cout << "Square of 3 == " << func::square(3) << '\n';
 }

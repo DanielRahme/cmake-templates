@@ -12,6 +12,10 @@
 
 namespace func
 {
+  // Function declarations
+  unsigned int square(const int x);
+
+  // Templates
   template<typename T>
   void print_hello(T name)
   {
