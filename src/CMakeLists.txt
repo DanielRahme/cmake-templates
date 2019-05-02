@@ -4,7 +4,10 @@ project(Executables)
 set(TargetName hello)
 add_executable(${TargetName} main.cpp)
 
-set_target_properties(${TargetName} PROPERTIES  CXX_STANDARD 17)
+set_target_properties(${TargetName} PROPERTIES  
+    CXX_STANDARD 17
+    COMPILE_FLAGS -save-temps
+    )
 
 # Compiler flags for target
 target_compile_options(${TargetName} PRIVATE
@@ -15,5 +18,5 @@ target_compile_options(${TargetName} PRIVATE
     -Wpedantic
     )
 
-# Link with included libraries from /lib
+# Link with libraries from src/lib
 target_link_libraries(${TargetName} PRIVATE Libs)
