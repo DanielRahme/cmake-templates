@@ -7,7 +7,7 @@ add_library(${LibName}
 
 # Link with the header files in inc
 target_include_directories(${LibName} PUBLIC 
-    "${CMAKE_CURRENT_SOURCE_DIR}/../inc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../inc"
     )
 
 # Set the language standard to C++17 for target
