@@ -1,10 +1,12 @@
 
 project(UnitTest)
 
-# Add the executable target
-set(TargetName testmain)
-add_executable(${TargetName} testmain.cpp)
+# Run test writing "make test"
+set(TargetName test)
+# Add the executable, exclude from running when writing make
+add_executable(${TargetName} EXCLUDE_FROM_ALL testmain.cpp)
 
+# Use C++17 standard
 set_target_properties(${TargetName} PROPERTIES  CXX_STANDARD 17)
 
 # Compiler flags for target
