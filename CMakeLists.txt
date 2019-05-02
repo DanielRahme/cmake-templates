@@ -7,3 +7,4 @@ project(Hello VERSION 1.0 LANGUAGES CXX)
 # Add the CMakeFiles in the other directories
 add_subdirectory(src)
 add_subdirectory(lib)
+add_subdirectory(test)
