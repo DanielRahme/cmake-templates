@@ -5,7 +5,7 @@
  * @brief Library with function(s).
  */
 
-#include "functions.hpp"
+#include <functions.hpp>
 
 unsigned int func::square(const int x)
 {

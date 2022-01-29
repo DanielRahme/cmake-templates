@@ -6,7 +6,7 @@
  */
 
 #include <iostream>
-#include "functions.hpp"
+#include <functions.hpp>
 
 int main()
 {
