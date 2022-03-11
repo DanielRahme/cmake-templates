@@ -13,13 +13,13 @@ $ ./src/hello
 ```
 
 ## Test
-Run all tests using CTest by using the following command in build directory:
+Run all tests using CTest by entering the following command in build directory:
 
     $ make test
 
 The tests will be compiled in the `/build/test/` folder and using [doctest](https://github.com/doctest/doctest) for unit tests:
 
-    $ /test/my_test
+    $ ./test/my_test
 
 ## Directory structure
 ```
